@@ -29,9 +29,7 @@ void loop() {
       Serial.print(": ");
       // Print out message
       Serial.print((char*)&msg[1]);
-      for( unsigned i = 1; i < msgLen; ++i ) {
-        Serial.write(msg[i]);
-      }
+      // Formatting for new line
       if(msg[msgLen] != '\n') {
         Serial.write('\n');
         Serial.write('\r');
